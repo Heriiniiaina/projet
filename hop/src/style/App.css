@@ -1,0 +1,194 @@
+/* Réinitialisations */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    margin: 10px;
+    background-color: #f2f5f9;
+    color: #4d4d4d;
+    overflow-x: hidden;
+}
+
+.container{
+    display: grid;
+    width: calc(100% - 40px);
+    height: calc(100vh - 20px);
+    grid-template-columns: 70px 1fr;
+    grid-template-rows: 70px 1fr;
+    grid-template-areas: 
+        "logo main"
+        "nav main"
+    ;
+    gap: 15px 15px;
+}
+
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    
+}
+.container main{
+    padding: 10px;
+    overflow: scroll;
+    margin: 0 40px;
+    grid-area: main;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #010f22;
+}
+.brand h1{
+    font-size: 18px;
+}
+.HeaderData{
+    display: flex;
+    gap: 10px;
+}
+
+.linked{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.InfoGeneral{
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    height: 100%;
+    overflow-y: scroll;
+    margin: 10px;
+}
+.InfoGeneral .basic{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.InfoGeneral .basic h2{
+    font-size: 18px;
+    margin: 5px;
+}
+.InfoGeneral .basic h3{
+    color:#4d4d4d ;
+    font-weight: 400;
+    font-size: 13px;
+}
+.InfoGeneral .basic p{
+    font-size: 16px;
+    margin: 5px;
+    font-weight: 400;
+}
+
+.InfoGeneral .basic .details{
+    display: flex;
+    gap: 20px;
+}
+
+.InfoGeneral .basic .details .data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.InfoGeneral .basic .details .data h4{
+    font-size: 2rem;
+}
+.InfoGeneral .basic .details .data p{
+    font-size: 1rem;
+    color: #4d4d4d;
+}
+
+.InfoGeneral .detail{
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.PatientData{
+    padding: 5px;
+    border-bottom: 1px solid #4d4d4d3a ;
+}
+.PatientData .label{
+    color: #4d4d4d;
+    font-weight: 300;
+    margin: 5px 0;
+    font-size: 12px;
+}
+.PatientData .value{
+    font-weight: 600;
+    margin: 5px 0;
+    font-size: 14px;
+    color: #010f22;
+}
+
+.note{
+    margin: 10px;
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.note .tete{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+}
+.note .tete a{ 
+    text-decoration: none;
+    color: rgb(0, 80, 228);
+    font-weight: bold;
+}
+.note .noteEl{
+    background-color: #f2f5f9;
+    margin:10px 0;
+    height: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: scroll;
+}
+
+.note  .modifier{
+    position: absolute;
+    top: 30px;
+    left:50%;
+    transform: translateX(-50%);  
+    color: #010f22;  
+}
+
+.ConsultItem{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.ConsultList{
+    height: 25vh;
+    overflow: scroll;
+}
+
+.newConsult{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
